@@ -1,0 +1,49 @@
+body{
+	background-image: ;
+	background-color:black;
+}
+div.wrapper{
+	font-family:sans-serif,Arial;
+	background-image: ;
+	background-color:white;
+	text-align:center;
+	width: 60%;
+	margin: auto;
+	padding: 20px;
+	display:block;
+	margin-top: 200px;
+	font:status-bar;
+}
+h1{
+	font-family: Roboto;
+	font-size:50pt;
+	text-transform: Uppercase;
+}
+.hidden{
+	display:none;
+}
+#timer{
+	font-size: 36pt;
+	width: 60px;
+	height: 60px;
+	border: gold;
+	border-style: dotted;
+	border-radius: 20px;
+	padding: 5px 10px 5px 10px;
+	color:gold;
+	text-shadow:  
+	-1px -1px 0 red,  
+    1px -1px 0 red,
+    -1px 1px 0 red,
+    1px 1px 0 red;
+    position:fixed;
+}
+#game{
+	font-color:black;
+}
+h3{
+	float:right;
+	margin:auto;
+	text-align: center;
+	display:block;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trivia Game</title>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+	<div class = "wrapper">
+		<h1> TRIVIA GAME </h1>
+		<div class = "start">
+			<button id="startButton">Start</button>
+		</div>
+		<div id = "game" class = "hidden">
+				<div id="timer"></div>
+				<br>
+			<div id = "question">
+			</div>
+			<div id = "choices">
+				<form>
+	 				<input type="radio" name="answer"><h3 id="selectionOne"></h3> <br>
+	 				<input type="radio" name="answer"><h3 id="selectionTwo"></h3> <br>
+	  				<input type="radio" name="answer"> <h3 id="selectionThree"></h3> <br>
+	  				<input type="radio" name="answer"> <h3 id="slectionFour"></h3> <br>
+				</form>
+				<button id="submit">Submit</button>
+			</div>
+
+		</div>
+	</div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>
