@@ -13,18 +13,39 @@
 		<div id = "game" class = "hidden">
 				<div id="timer"></div>
 				<br>
-			<div id = "question">
+			<div id = "questionBox">
+				<h2 id = "question"></h2>
 			</div>
 			<div id = "choices">
 				<form>
-	 				<input type="radio" name="answer"><h3 id="selectionOne"></h3> <br>
-	 				<input type="radio" name="answer"><h3 id="selectionTwo"></h3> <br>
-	  				<input type="radio" name="answer"> <h3 id="selectionThree"></h3> <br>
-	  				<input type="radio" name="answer"> <h3 id="slectionFour"></h3> <br>
+	 				<input type="radio" name="answer" id="1" ><div id="selectionOne"></div> <br>
+	 				<input type="radio" name="answer" id ="2"><div id="selectionTwo"></div> <br>
+	  				<input type="radio" name="answer" id ="3"> <div id="selectionThree"></div> <br>
+	  				<input type="radio" name="answer" id ="4"> <div id="selectionFour"></div> <br>
 				</form>
 				<button id="submit">Submit</button>
-			</div>
 
+			</div>
+		</div>
+		<div id= "correct" class = "hidden">
+			<div id="timer"></div>
+			<h2>The answer is <span id ="answer"></span></h2>
+			<br>
+			<p id="message"></p>
+			<br>
+			<img>
+			<br>
+			<button id="nextButton">Next</button>
+		</div>
+		<div id="gameOver" class = "hidden">
+			<br>
+			<h2>Time Ran Out</h2>
+			<br>
+			<h3>That sucks</h3>
+			<br>
+			<p> Would you like to play again?</p>
+			<br>
+			<button id="tryAgainButton">Try Again</button>
 		</div>
 	</div>
 
