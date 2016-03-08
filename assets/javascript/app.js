@@ -7,7 +7,7 @@ window.onload = function(){
 	//opening game
 	$('#startButton').click(function() {
 		$(this).hide();
-		$("div#game").removeClass("hidden");
+		$("#questionBox1").removeClass("hidden");
 		counter=setInterval(inc, 1000);
 		return a()
 	});
@@ -19,8 +19,8 @@ window.onload = function(){
 		$("#timer").html(time);
 	if (time === 0){
 		clearInterval(counter);
-		return a()
-		return b()
+		$("timer").html(time);
+		b()
 	}else {
 	}
 	}
@@ -34,145 +34,149 @@ window.onload = function(){
 		image:""
 	}
 	function a(){
-		$("#question").text(firstQuestion.question)
-		$("#selectionOne").text(firstQuestion.answer)
-		$("#selectionTwo").text(firstQuestion.choice1)
-		$("#selectionThree").text(firstQuestion.choice2)
-		$("#selectionFour").text(firstQuestion.choice3)
+		$("#question1").text(firstQuestion.question)
+		$("#firstSelectionOne").text(firstQuestion.answer)
+		$("#firstSelectionTwo").text(firstQuestion.choice1)
+		$("#firstSelectionThree").text(firstQuestion.choice2)
+		$("#firstSelectionFour").text(firstQuestion.choice3)
 	};
 	function a1(){
-		$("#answer").text(firstQuestion.answer)
-		$("#game").hide();
-		$("#correct").removeClass("hidden");
+		$("#firstAnswer").text(firstQuestion.answer)
+		$("#questionBox1").hide();
+		$("#firstCorrect").removeClass("hidden");
 
 	}
-	$('#submit').click(function() {
-		return b()
+	$('#firstSubmit').click(function() {
+		a1();
 		clearInterval(counter);
-		$("#submit").attr("id","submit2");
-		time = 16;
-		counter=setInterval(inc,1000);
 		//$("#nextButton").attr("id","nextButton2");
-		if (document.getElementById("1").checked){
+		if (document.getElementById("first1").checked){
 			correct++;
-			$("#message").text("That's right!");
-		}else if (document.getElementById("2").checked){  
+		}else if (document.getElementById("first2").checked){  
 			incorrect++;
-		}else if (document.getElementById("3").checked){
+		}else if (document.getElementById("first3").checked){
 			incorrect++;
-		}else if (document.getElementById("4").checked){
+		}else if (document.getElementById("first4").checked){
 			incorrect++;
 		}else {
 			unanswered++;
 		}
 	});
-	// $("#nextButton").click(function(){
-	// 		time = 16;
-	// 		counter=setInterval(inc,1000);
-	// 		$("#game").show();
-	// 		$("#correct").hide();
-	// 		$("#submit").attr("id","submit2");
-			//$("#nextButton").attr("id","nextButton2");
-			// delete firstQuestion;
-			// return b();
-	// });
-};
+	$("#firstNextButton").click(function(){
+			time = 16;
+			counter=setInterval(inc,1000);
+			$("#timer").html(time);
+			$("#questionBox2").show();
+			$("#firstCorrect").hide();
+			delete firstQuestion;
+			b();
+	});
 
-
-//second question
-secondQuestion ={
-	question:"What year did the Titanic Sink?",
-	choice1:"1906",
-	choice2:"1924",
-	choice3:"1937",
-	answer:"1912",
-}
-function b(){
-		$("#question").text(secondQuestion.question)
-		$("#selectionOne").text(secondQuestion.choice1)
-		$("#selectionTwo").text(secondQuestion.answer)
-		$("#selectionThree").text(secondQuestion.choice2)
-		$("#selectionFour").text(secondQuestion.choice3)
-};
-// function b1(){
-// 	$("#answer").text(secondQuestion.answer)
-
-// }
-$('#submit2').click(function() {
-	return c();
-	clearInterval(counter);
-	time = 16;
-	counter = setInterval(inc,1000);
-	$("#submit2").attr("id","submit3");
-	$("#nextButton2").attr("id","nextButton3");
-	if (document.getElementById("2").checked){
-		correct++;
-	}else if (document.getElementById("1").checked){  
-		incorrect++;
-	}else if (document.getElementById("3").checked){
-		incorrect++;
-	}else if (document.getElementById("4").checked){
-		incorrect++;
-	}else {
-		unanswered++;
+	//second question
+	secondQuestion ={
+		question:"What year did the Titanic Sink?",
+		choice1:"1906",
+		choice2:"1924",
+		choice3:"1937",
+		answer:"1912",
 	}
-});
-// $("#nextButton2").click(function(){
-// 		time = 16;
-// 		counter = setInterval(inc,1000);
-// 		$("#game").show();
-// 		$("#correct").hide();
-// 		$("#submit2").attr("id","submit3");
-// 		$("#nextButton2").attr("id","nextButton3");
-// 		// delete secondQuestion;
-// 		return c();
-// });
+	function b(){
+			$("#question2").text(secondQuestion.question)
+			$("#secondSelectionOne").text(secondQuestion.choice1)
+			$("#secondSelectionTwo").text(secondQuestion.answer)
+			$("#secondSelectionThree").text(secondQuestion.choice2)
+			$("#secondSelectionFour").text(secondQuestion.choice3)
 
-//third question
-thirdQuestion ={
-	question:"What is the diameter of the Earth?",
-	choice1:"10,000 miles",
-	choice2:"16,000 miles",
-	choice3:"26,000 miles",
-	answer:"8,000 miles",
-}
-function c(){
-		$("#question").text(thirdQuestion.question)
-		$("#selectionOne").text(thirdQuestion.answer)
-		$("#selectionTwo").text(thirdQuestion.choice1)
-		$("#selectionThree").text(thirdQuestion.choice2)
-		$("#selectionFour").text(thirdQuestion.choice3)
-};
-// function b1(){
-// 	$("#answer").text(secondQuestion.answer)
-
-// }
-$('#submit3').click(function() {
-	$("#correct").show();
-	$("#game").hide();
-	clearInterval(counter);
-	return d();
-	if (document.getElementById("1").checked){
-		correct++;
-	}else if (document.getElementById("2").checked){  
-		incorrect++;
-	}else if (document.getElementById("3").checked){
-		incorrect++;
-	}else if (document.getElementById("4").checked){
-		incorrect++;
-	}else {
-		unanswered++;
+	};
+	function b1(){
+			$("#secondAnswer").text(secondQuestion.answer)
+			$("#questionBox2").hide();
+			$("#secondCorrect").removeClass("hidden");
 	}
-});
-$("#nextButton3").click(function(){
-		time = 16;
-		counter = setInterval(inc,1000);
-		$("#game").show();
-		$("#correct").hide();
-		// delete secondQuestion;
-		return d();
-});
+	$('#secondSubmit').click(function() {
+		b1();
+		clearInterval(counter);
+		if (document.getElementById("second2").checked){
+			correct++;
+		}else if (document.getElementById("second1").checked){  
+			incorrect++;
+		}else if (document.getElementById("second3").checked){
+			incorrect++;
+		}else if (document.getElementById("second4").checked){
+			incorrect++;
+		}else {
+			unanswered++;
+		}
+	});
+	$("#secondNextButton").click(function(){
+			time = 16;
+			counter = setInterval(inc,1000);
+			$("#secondCorrect").hide();
+			$("#timer").html(time);
+			$("#questionBox3").show();
+			delete secondQuestion;
+			// delete secondQuestion;
+			c();
+	});
+
+	//third question
+	thirdQuestion ={
+		question:"What is the diameter of the Earth?",
+		choice1:"10,000 miles",
+		choice2:"16,000 miles",
+		choice3:"26,000 miles",
+		answer:"8,000 miles",
+	}
+	function c(){
+			$("#question3").text(thirdQuestion.question)
+			$("#thirdSelectionOne").text(thirdQuestion.answer)
+			$("#thirdSelectionTwo").text(thirdQuestion.choice1)
+			$("#thirdSelectionThree").text(thirdQuestion.choice2)
+			$("#thirdSelectionFour").text(thirdQuestion.choice3)
+	};
+	function c1(){
+			$("#thirdAnswer").text(thirdQuestion.answer)
+			$("#questionBox3").hide();
+			$("#thirdCorrect").removeClass("hidden");
+	}
+	$('#thirdSubmit').click(function() {
+		$("#thirdCorrect").show();
+		$("#questionBox3").hide();
+		clearInterval(counter);
+		c1();
+		if (document.getElementById("third1").checked){
+			correct++;
+		}else if (document.getElementById("third2").checked){  
+			incorrect++;
+		}else if (document.getElementById("third3").checked){
+			incorrect++;
+		}else if (document.getElementById("third4").checked){
+			incorrect++;
+		}else {
+			unanswered++;
+		}
+	});
+	$("#thirdNextButton").click(function(){
+			// time = 16;
+			// counter = setInterval(inc,1000);
+			$("#gameOverPage").removeClass("hidden");
+			$("#thirdCorrect").hide();
+			delete thirdQuestion;
+			gameover();
+	});
+
+
+
+
+};
+
 //gameover
+function gameover(){
+	clearInterval(counter);
+	$("#correct").text("You got " + correct + " correct!");
+	$("#incorrect").text("You got " + incorrect + " incorrect.");
+	$("#unanswered").text("You have " + unanswered + " unanswered questions...")
+};
 $("#tryAgainButton").click(function(){
 	location.reload(true);
 });

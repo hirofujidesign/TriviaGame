@@ -10,38 +10,100 @@
 		<div class = "start">
 			<button id="startButton">Start</button>
 		</div>
-		<div id = "game" class = "hidden">
+		<div id = "game">
+			<div id = "questionBox1" class = "hidden">
 				<div id="timer"></div>
 				<br>
-			<div id = "questionBox">
-				<h2 id = "question"></h2>
-			</div>
-			<div id = "choices">
+				<h2 id = "question1"></h2>
+				<div id = "choices">
 				<form>
-	 				<input type="radio" name="answer" id="1" ><div id="selectionOne"></div> <br>
-	 				<input type="radio" name="answer" id ="2"><div id="selectionTwo"></div> <br>
-	  				<input type="radio" name="answer" id ="3"> <div id="selectionThree"></div> <br>
-	  				<input type="radio" name="answer" id ="4"> <div id="selectionFour"></div> <br>
+	 				<input type="radio" name="answer" id="first1" ><div id="firstSelectionOne"></div> <br>
+	 				<input type="radio" name="answer" id ="first2"><div id="firstSelectionTwo"></div> <br>
+	  				<input type="radio" name="answer" id ="first3"> <div id="firstSelectionThree"></div> <br>
+	  				<input type="radio" name="answer" id ="first4"> <div id="firstSelectionFour"></div> <br>
 				</form>
-				<button id="submit">Submit</button>
-
+				<button id="firstSubmit">Submit</button>
+				</div>
 			</div>
-		</div>
-		<div id= "correct" class = "hidden">
-			<div id="timer"></div>
-			<h2>The answer is <span id ="answer"></span></h2>
+
+<!--first correct page-->
+
+			<div id= "firstCorrect" class = "hidden">
+			<h2>The answer is <span id ="firstAnswer"></span></h2>
 			<br>
 			<p id="message"></p>
 			<br>
 			<img>
 			<br>
-			<button id="nextButton">Next</button>
-		</div>
-		<div id="gameOver" class = "hidden">
+			<button id="firstNextButton">Next</button>
+			</div>
+
+<!--second question-->
+
+			<div id = "questionBox2" class ="hidden">
+				<h2 id = "question2"></h2>
+				<div id="timer"></div>
+				<div id = "choices">
+				<form>
+	 				<input type="radio" name="answer" id="second1" ><div id="secondSelectionOne"></div> <br>
+	 				<input type="radio" name="answer" id ="second2"><div id="secondSelectionTwo"></div> <br>
+	  				<input type="radio" name="answer" id ="second3"> <div id="secondSelectionThree"></div> <br>
+	  				<input type="radio" name="answer" id ="second4"> <div id="secondSelectionFour"></div> <br>
+				</form>
+				<button id="secondSubmit">Submit</button>
+				</div>
+			</div>
+
+<!--second correct page-->
+			
+			<div id= "secondCorrect" class = "hidden">
+			<div id="timer"></div>
+			<h2>The answer is <span id ="secondAnswer"></span></h2>
 			<br>
-			<h2>Time Ran Out</h2>
+			<p id="message"></p>
 			<br>
-			<h3>That sucks</h3>
+			<img>
+			<br>
+			<button id="secondNextButton">Next</button>
+			</div>
+
+<!--third question-->
+
+			<div id = "questionBox3" class ="hidden">
+				<h2 id = "question3"></h2>
+				<div id="timer"></div>
+				<div id = "choices">
+				<form>
+	 				<input type="radio" name="answer" id="third1" ><div id="thirdSelectionOne"></div> <br>
+	 				<input type="radio" name="answer" id ="third2"><div id="thirdSelectionTwo"></div> <br>
+	  				<input type="radio" name="answer" id ="third3"> <div id="thirdSelectionThree"></div> <br>
+	  				<input type="radio" name="answer" id ="third4"> <div id="thirdSelectionFour"></div> <br>
+				</form>
+				<button id="thirdSubmit">Submit</button>
+				</div>
+			</div>
+
+<!--third correct page-->
+			
+			<div id= "thirdCorrect" class = "hidden">
+			<div id="timer"></div>
+			<h2>The answer is <span id ="thirdAnswer"></span></h2>
+			<br>
+			<p id="message"></p>
+			<br>
+			<img>
+			<br>
+			<button id="thirdNextButton">Next</button>
+			</div>
+
+
+		<div id="gameOverPage" class = "hidden">
+			<br>
+			<h2>Game Over</h2>
+			<br>
+			<h3 id ="correct"></h3>
+			<h3 id ="incorrect"></h3>
+			<h3 id ="unanswered"></h3>
 			<br>
 			<p> Would you like to play again?</p>
 			<br>
